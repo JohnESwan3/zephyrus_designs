@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .footer-main {
+        @apply font-bold tracking-wide text-slate-800
+    }
+    .footer-secondary {
+        @apply font-semibold text-slate-500 transition-all duration-100 ease-in hover:text-fuchsia-700}
+}
+
+/* Hide Scrollbar */
+::-webkit-scrollbar {
+    width: 0; /* Remove scrollbar space */
+    background: transparent; /* Optional: just make scrollbar invisible */
+}
