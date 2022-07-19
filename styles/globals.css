@@ -8,6 +8,10 @@
     }
     .footer-secondary {
         @apply font-semibold text-slate-500 transition-all duration-100 ease-in hover:text-fuchsia-700}
+    .full-nav-item{
+        @apply  px-3 py-2 text-sm font-medium text-slate-700 border-b border-slate-100 hover:border-fuchsia-600  transition-all duration-100 ease-in}
+    .mobile-nav-item {
+        @apply block rounded-md px-3 py-2 text-base font-medium text-slate-700 transition-all duration-100 ease-in hover:text-fuchsia-500 hover:bg-slate-200}
 }
 
 /* Hide Scrollbar */

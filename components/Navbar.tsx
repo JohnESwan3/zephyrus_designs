@@ -1,94 +1,140 @@
 import React, { useState } from "react";
+import { Transition } from "@headlessui/react";
 import Link from "next/link";
-import { FaHome, FaUserAlt } from "react-icons/fa";
-import { BiMenuAltRight, BiX } from "react-icons/bi";
 
-const Navbar = () => {
-  const [nav, setNav] = useState(false);
-
-  const handleNav = () => {
-    setNav(!nav);
-  };
+export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="fixed w-full p-4 bg-slate-50 shadow-lg border-b border-slate-300 shadow-slate-300 h-[80px] flex text-center items-center">
-      <div className="flex flex-row justify-between max-w-[1920px] mx-auto w-full text-center items-center">
-        <div className="p-2">
-          <div className="p-2">
-            <Link href="/">
-              <a
-                className="font-semibold text-lg text-fuchsia-600 tracking-wider"
-                aria-label="Zephyrus Designs"
+    <div className="sticky top-0 z-50">
+      <nav className="bg-slate-100 shadow-lg shadow-slate-300" id="nav">
+        <div className="mx-auto max-w-[1920px] px-4 sm:px-6 lg:px-8">
+          <div className="flex h-16 items-center justify-between">
+            <div className="flex items-center justify-between">
+              <div className="flex-shrink-0">
+                <Link href="/">
+                  <a aria-label="Home">
+                    <h1 className="text-xl font-semibold text-fuchsia-600">
+                      Zephyrus Creations
+                    </h1>
+                  </a>
+                </Link>
+              </div>
+              <div className="hidden md:block">
+                <div className="ml-10 flex items-baseline space-x-4">
+                  <Link href="/">
+                    <a className="full-nav-item" aria-label="Home">
+                      Home
+                    </a>
+                  </Link>
+                  <Link href="/">
+                    <a className="full-nav-item" aria-label="Portfolio">
+                      Portfolio
+                    </a>
+                  </Link>
+                  <Link href="/">
+                    <a className="full-nav-item" aria-label="Blog">
+                      Blog
+                    </a>
+                  </Link>
+                  <Link href="/">
+                    <a className="full-nav-item" aria-label="About">
+                      About
+                    </a>
+                  </Link>
+                </div>
+              </div>
+            </div>
+            {/* Mobile Menu Button */}
+            <div className="-mr-2 flex md:hidden">
+              <button
+                onClick={() => setIsOpen(!isOpen)}
+                type="button"
+                className="inline-flex items-center justify-center rounded-md bg-slate-100 p-2 text-fuchsia-600 shadow-inner shadow-slate-300 transition-all hover:bg-fuchsia-600 hover:text-slate-100 focus:outline-none"
+                aria-controls="mobile-menu"
+                aria-expanded="false"
               >
-                Zephyrus Designs
-              </a>
-            </Link>
+                <span className="sr-only">Open main menu</span>
+                {!isOpen ? (
+                  <svg
+                    className="block h-6 w-6"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M4 6h16M4 12h16M4 18h16"
+                    />
+                  </svg>
+                ) : (
+                  <svg
+                    className="block h-6 w-6"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M6 18L18 6M6 6l12 12"
+                    />
+                  </svg>
+                )}
+              </button>
+            </div>
           </div>
         </div>
-        <div className="hidden md:inline">
-          <ul className="flex flex-row text-center items-center tracking-wide space-x-3 px-2 py-1">
-            <li className="hover:text-fuchsia-600 transition-colors duration-150 ease-in">
-              <Link href="/">
-                <a className="p-2" aria-label="Home">
-                  Home
-                </a>
-              </Link>
-            </li>
-            <li className="hover:text-fuchsia-600 transition-colors duration-150 ease-in">
-              <Link href="/">
-                <a className="p-2" aria-label="Custom">
-                  Custom
-                </a>
-              </Link>
-            </li>
-            <li className="hover:text-fuchsia-600 transition-colors duration-150 ease-in ">
-              <Link href="/">
-                <a aria-label="Templates" className="p-2">
-                  Templates
-                </a>
-              </Link>
-            </li>
-            <li className="hover:text-fuchsia-600 transition-colors duration-150 ease-in">
-              <Link href="/">
-                <a className="p-2" aria-label="Contact">
-                  Contact
-                </a>
-              </Link>
-            </li>
-            <li className="flex flex-row text-center items-center space-x-4 p-1 shadow-md hover:shadow border-slate-300 border hover:text-fuchsia-600 transition-all duration-100 ease-in shadow-slate-400 rounded-full">
-              <Link href="/">
-                <a aria-label="Home" className="p-2">
-                  <FaUserAlt className="text-lg" />
-                </a>
-              </Link>
-            </li>
-          </ul>
-        </div>
-        <div className="block md:hidden">
-          <div
-            className=" space-x-4 p-1 shadow-md hover:shadow border-slate-300 border hover:text-fuchsia-600 transition-all duration-100 ease-in shadow-slate-400 rounded-full"
-            onClick={handleNav}
-          >
-            {nav ? <BiMenuAltRight size={25} /> : <BiX size={25} />}
-          </div>
-          <div
-            className={
-              nav
-                ? "md:hidden fixed right-[-100%] top-20 h-[90%] ease-out duration-200"
-                : "md:hidden fixed right-0 top-20 w-[100%] sm:w-[50%] h-[100%] bg-slate-50 ease-in duration-200 z-10 shadow-lg border-l border-slate-300 shadow-slate-400"
-            }
-          >
-            <ul className="flex flex-col w-full text-left p-2 space-y-4">
-              <li>home</li>
-              <li>custom</li>
-              <li>templates</li>
-              <li>contact</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </nav>
-  );
-};
 
-export default Navbar;
+        <Transition
+          show={isOpen}
+          enter="transition ease-out duration-300 transform"
+          enterFrom="opacity-0 scale-95"
+          enterTo="opacity-100 scale-100"
+          leave="transition ease-in duration-75 transform"
+          leaveFrom="opacity-100 scale-100"
+          leaveTo="opacity-0 scale-95"
+        >
+          {(ref) => (
+            <div className="md:hidden" id="mobile-menu">
+              <div
+                ref={ref}
+                className="space-y-1 px-2 pt-2 pb-3 text-center transition-all sm:px-3"
+              >
+                <Link href="/">
+                  <a className="mobile-nav-item" aria-label="Home">
+                    Home
+                  </a>
+                </Link>
+                <Link href="/" aria-label="Portfolio">
+                  <a className="mobile-nav-item">Portfolio</a>
+                </Link>
+                <Link href="/">
+                  <a className="mobile-nav-item" aria-label="Blog">
+                    Blog
+                  </a>
+                </Link>
+                {/* <Link href="/contact">
+                  <a className="mobile-nav-item">Contact</a>
+                </Link> */}
+
+                <Link href="/">
+                  <a className="mobile-nav-item" aria-label="About">
+                    About
+                  </a>
+                </Link>
+              </div>
+            </div>
+          )}
+        </Transition>
+      </nav>
+    </div>
+  );
+}
