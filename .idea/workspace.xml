@@ -1,23 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="083019b2-a0ca-4527-991a-7545849b7ff6" name="Changes" comment="Nav | Footer | Sanity">
-      <change afterPath="$PROJECT_DIR$/sanity.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/studio/config/@sanity/data-aspects.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/studio/config/@sanity/default-layout.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/studio/config/@sanity/default-login.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/studio/config/@sanity/form-builder.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/studio/config/@sanity/vision.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/studio/schemas/blockContent.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/studio/schemas/category.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/studio/schemas/template.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/studio/yarn.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/typings.d.ts" afterDir="false" />
+    <list default="true" id="083019b2-a0ca-4527-991a-7545849b7ff6" name="Changes" comment="Sanity Schema setup | Sanity/Stripe dependencies">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/studio/schemas/schema.js" beforeDir="false" afterPath="$PROJECT_DIR$/studio/schemas/schema.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Navbar.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +35,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/johne/OneDrive/Documents/Code/front-end/portfolio-april-2022",
+    "last_opened_file_path": "C:/Users/johne/OneDrive/Documents/Code/front-end/block-watch",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
@@ -79,7 +65,8 @@
       <workItem from="1657712296345" duration="4058000" />
       <workItem from="1657824247760" duration="10992000" />
       <workItem from="1657920277953" duration="965000" />
-      <workItem from="1657964739416" duration="7184000" />
+      <workItem from="1657964739416" duration="7409000" />
+      <workItem from="1658097994993" duration="4145000" />
     </task>
     <task id="LOCAL-00001" summary="Start Project | Update Readme">
       <created>1657714707222</created>
@@ -95,7 +82,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658015115470</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Sanity Schema setup | Sanity/Stripe dependencies">
+      <created>1658018897058</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1658018897058</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -116,7 +110,8 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Start Project | Update Readme" />
     <MESSAGE value="Nav | Footer | Sanity" />
-    <option name="LAST_COMMIT_MESSAGE" value="Nav | Footer | Sanity" />
+    <MESSAGE value="Sanity Schema setup | Sanity/Stripe dependencies" />
+    <option name="LAST_COMMIT_MESSAGE" value="Sanity Schema setup | Sanity/Stripe dependencies" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
