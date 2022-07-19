@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { Transition } from "@headlessui/react";
 import Link from "next/link";
+import { FaUserAlt } from "react-icons/all";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [userIsOpen, setUserIsOpen] = useState(false);
 
   return (
     <div className="sticky top-0 z-50">
@@ -29,28 +31,40 @@ export default function Navbar() {
                   </Link>
                   <Link href="/">
                     <a className="full-nav-item" aria-label="Portfolio">
-                      Portfolio
+                      Custom
                     </a>
                   </Link>
                   <Link href="/">
                     <a className="full-nav-item" aria-label="Blog">
-                      Blog
+                      Templates
                     </a>
                   </Link>
                   <Link href="/">
                     <a className="full-nav-item" aria-label="About">
-                      About
+                      Contact
                     </a>
                   </Link>
                 </div>
               </div>
+            </div>
+            <div className="hidden md:block">
+              <button
+                onClick={() => setUserIsOpen(!userIsOpen)}
+                type="button"
+                aria-controls="user-menu"
+                aria-expanded="false"
+                className="p-3 shadow-inner rounded-full shadow-slate-400 text-xl hover:text-fuchsia-600 hover:shadow-fuchsia-900 transition-all duration-100 ease-in focus:outline-none"
+              >
+                <span className="sr-only">Open User Menu</span>
+                <FaUserAlt />
+              </button>
             </div>
             {/* Mobile Menu Button */}
             <div className="-mr-2 flex md:hidden">
               <button
                 onClick={() => setIsOpen(!isOpen)}
                 type="button"
-                className="inline-flex items-center justify-center rounded-md bg-slate-100 p-2 text-fuchsia-600 shadow-inner shadow-slate-300 transition-all hover:bg-fuchsia-600 hover:text-slate-100 focus:outline-none"
+                className="inline-flex items-center justify-center rounded-md bg-slate-100 p-2 text-fuchsia-600 shadow-inner shadow-slate-300 transition-all hover:shadow-fuchsia-900 focus:outline-none"
                 aria-controls="mobile-menu"
                 aria-expanded="false"
               >
@@ -92,6 +106,33 @@ export default function Navbar() {
             </div>
           </div>
         </div>
+        <Transition
+          show={userIsOpen}
+          enter="transition ease-out duration-300 transform"
+          enterFrom="opacity-0 scale-95"
+          enterTo="opacity-100 scale-100"
+          leave="transition ease-in duration-75 transform"
+          leaveFrom="opacity-100 scale-100"
+          leaveTo="opacity-0 scale-95"
+        >
+          {(ref) => (
+            <div className="hidden md:block" id="user-menu">
+              <div
+                ref={ref}
+                className="space-y-1 px-2 pt-2 pb-3 text-center items-center transition-all sm:px-3"
+              >
+                <div className="flex flex-row justify-center space-x-4">
+                  <button className="px-3 py-1 bg-slate-900 rounded-lg text-slate-100 hover:scale-110 transition-all duration-75 ease-in font-semibold cursor-pointer">
+                    Log In
+                  </button>
+                  <button className="px-3 py-1 shadow-inner shadow-slate-400 rounded-lg hover:text-fuchsia-600 transition-all duration-75 ease-in font-semibold cursor-pointer">
+                    Sign Up
+                  </button>
+                </div>
+              </div>
+            </div>
+          )}
+        </Transition>
 
         <Transition
           show={isOpen}
@@ -114,20 +155,16 @@ export default function Navbar() {
                   </a>
                 </Link>
                 <Link href="/" aria-label="Portfolio">
-                  <a className="mobile-nav-item">Portfolio</a>
+                  <a className="mobile-nav-item">Contact</a>
                 </Link>
                 <Link href="/">
                   <a className="mobile-nav-item" aria-label="Blog">
-                    Blog
+                    Templates
                   </a>
                 </Link>
-                {/* <Link href="/contact">
-                  <a className="mobile-nav-item">Contact</a>
-                </Link> */}
-
                 <Link href="/">
                   <a className="mobile-nav-item" aria-label="About">
-                    About
+                    Contact
                   </a>
                 </Link>
               </div>

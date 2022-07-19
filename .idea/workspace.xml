@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="083019b2-a0ca-4527-991a-7545849b7ff6" name="Changes" comment="Work on mobile navbar">
+    <list default="true" id="083019b2-a0ca-4527-991a-7545849b7ff6" name="Changes" comment="Navbar change">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Navbar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/globals.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +66,7 @@
       <workItem from="1657824247760" duration="10992000" />
       <workItem from="1657920277953" duration="965000" />
       <workItem from="1657964739416" duration="7409000" />
-      <workItem from="1658097994993" duration="5950000" />
+      <workItem from="1658097994993" duration="7925000" />
     </task>
     <task id="LOCAL-00001" summary="Start Project | Update Readme">
       <created>1657714707222</created>
@@ -99,7 +96,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658194871028</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Navbar change">
+      <created>1658196781130</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1658196781130</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -122,7 +126,8 @@
     <MESSAGE value="Nav | Footer | Sanity" />
     <MESSAGE value="Sanity Schema setup | Sanity/Stripe dependencies" />
     <MESSAGE value="Work on mobile navbar" />
-    <option name="LAST_COMMIT_MESSAGE" value="Work on mobile navbar" />
+    <MESSAGE value="Navbar change" />
+    <option name="LAST_COMMIT_MESSAGE" value="Navbar change" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
